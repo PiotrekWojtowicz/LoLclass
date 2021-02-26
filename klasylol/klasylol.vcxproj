@@ -139,11 +139,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="character.cpp" />
+    <ClCompile Include="IBaseCharacter.cpp" />
+    <ClCompile Include="IEnergyCharacter.cpp" />
+    <ClCompile Include="Equipment.cpp" />
+    <ClCompile Include="IItem.cpp" />
     <ClCompile Include="klasylol.cpp" />
+    <ClCompile Include="IManaCharacter.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="character.h" />
+    <ClInclude Include="IBaseCharacter.h" />
+    <ClInclude Include="IEnergyCharacter.h" />
+    <ClInclude Include="Equipment.h" />
+    <ClInclude Include="IItem.h" />
+    <ClInclude Include="IManaCharacter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

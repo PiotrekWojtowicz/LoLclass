@@ -1,6 +1,6 @@
 ﻿
 #include <iostream>
-#include "character.h"
+#include "baseCharacter.h"
 
 int main()
 {
