@@ -9,8 +9,7 @@
 #include <mciapi.h>
 #include <mmeapi.h>
 #pragma comment(lib, "Winmm.lib")
-std::string getRandomColor();
-std::string getRandomColorHardMode();
+std::string getRandomColor(int mode);
 std::string happy = "";
 std::string sad = "";
 std::string czescLukaszchodznadol;
@@ -41,12 +40,12 @@ void loadAscii() {
 
 void changeasci() {
     std::cout << happy;
-    std::string color = "color " + getRandomColor();
+    std::string color = "color " + getRandomColor(0);
     system(color.c_str());
     std::this_thread::sleep_for(std::chrono::milliseconds(200));
     system("CLS");
     std::cout << sad;
-    color = "color " + getRandomColor();
+    color = "color " + getRandomColor(0);
     system(color.c_str());
     std::this_thread::sleep_for(std::chrono::milliseconds(200));
     system("CLS");
@@ -66,16 +65,13 @@ int main() {
     return 0;
 }
 
-std::string getRandomColor() {
+std::string getRandomColor(int mode) {
     char first = 'A' + rand() % 6;
     std::string output = std::string(1, first);
-    return output;
-}
-
-std::string getRandomColorHardMode(){
-    char first = 'A' + rand() % 6;
-    char second = '0' + rand() % 10;
-    std::string output = std::string(1, first);
-    output += std::string(1, second);
+    if (mode == 1)
+    {
+        char second = '0' + rand() % 10;
+        output += std::string(1, second);
+    }
     return output;
 }
