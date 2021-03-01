@@ -46,7 +46,7 @@ void changeasci() {
     std::this_thread::sleep_for(std::chrono::milliseconds(200));
     system("CLS");
     std::cout << sad;
-    color = "color " + getRandomColorHardMode();
+    color = "color " + getRandomColor();
     system(color.c_str());
     std::this_thread::sleep_for(std::chrono::milliseconds(200));
     system("CLS");
