@@ -67,12 +67,20 @@ int main() {
 }
 
 std::string getRandomColor() {
-    char first = 'A' + rand() % 6;
+    int random = rand() % 16;
+    char first;
+    if (random > 10) {
+        first = 'A' + (random-10) % 6;
+    }
+    else {
+        first = '0'+ random;
+    }
     std::string output = std::string(1, first);
     return output;
 }
 
 std::string getRandomColorHardMode(){
+
     char first = 'A' + rand() % 6;
     char second = '0' + rand() % 10;
     std::string output = std::string(1, first);
