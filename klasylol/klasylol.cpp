@@ -54,7 +54,7 @@ void changeasci() {
 int main() {
     system("mode con:cols=100 lines=46");
     LPCWSTR a = L"open \"test.mp3\" type mpegvideo alias mp3";
-    LPCWSTR b = L"play mp3";
+    LPCWSTR b = L"play mp3 repeat";
     mciSendString(a, NULL, 0, NULL);
     mciSendString(b, NULL, 0, NULL);
     system("mshta \"javascript:code(close((V=(v=new ActiveXObject('SAPI.SpVoice')).GetVoices()).count&&v.Speak('Work in progress')))\"");
