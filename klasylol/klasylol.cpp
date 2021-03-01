@@ -10,6 +10,7 @@
 #include <mmeapi.h>
 #pragma comment(lib, "Winmm.lib")
 std::string getRandomColor();
+std::string getRandomColorHardMode();
 std::string happy = "";
 std::string sad = "";
 std::string czescLukaszchodznadol;
@@ -45,7 +46,7 @@ void changeasci() {
     std::this_thread::sleep_for(std::chrono::milliseconds(200));
     system("CLS");
     std::cout << sad;
-    color = "color " + getRandomColor();
+    color = "color " + getRandomColorHardMode();
     system(color.c_str());
     std::this_thread::sleep_for(std::chrono::milliseconds(200));
     system("CLS");
@@ -67,8 +68,14 @@ int main() {
 
 std::string getRandomColor() {
     char first = 'A' + rand() % 6;
+    std::string output = std::string(1, first);
+    return output;
+}
+
+std::string getRandomColorHardMode(){
+    char first = 'A' + rand() % 6;
     char second = '0' + rand() % 10;
     std::string output = std::string(1, first);
-    //output += std::string(1, second);
+    output += std::string(1, second);
     return output;
 }
