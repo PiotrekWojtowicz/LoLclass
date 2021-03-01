@@ -9,7 +9,7 @@
 #include <mciapi.h>
 #include <mmeapi.h>
 #pragma comment(lib, "Winmm.lib")
-std::string getRandomColor(int mode);
+std::string getRandomColor();
 std::string happy = "";
 std::string sad = "";
 std::string czescLukaszchodznadol;
@@ -40,12 +40,12 @@ void loadAscii() {
 
 void changeasci() {
     std::cout << happy;
-    std::string color = "color " + getRandomColor(0);
+    std::string color = "color " + getRandomColor();
     system(color.c_str());
     std::this_thread::sleep_for(std::chrono::milliseconds(200));
     system("CLS");
     std::cout << sad;
-    color = "color " + getRandomColor(0);
+    color = "color " + getRandomColor();
     system(color.c_str());
     std::this_thread::sleep_for(std::chrono::milliseconds(200));
     system("CLS");
@@ -68,8 +68,8 @@ int main() {
 std::string getRandomColor() {
     int random = rand() % 16;
     char first;
-    if (random > 10) {
-        first = 'A' + (random-10) % 6;
+    if (random >= 10) {
+        first = 'A' + (random-10);
     }
     else {
         first = '0'+ random;
