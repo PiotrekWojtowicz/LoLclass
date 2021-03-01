@@ -51,4 +51,11 @@
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="happy.txt" />
+    <Text Include="sad.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="test.mp3" />
+  </ItemGroup>
 </Project>
