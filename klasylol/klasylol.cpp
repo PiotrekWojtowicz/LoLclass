@@ -52,7 +52,7 @@ void changeasci() {
 }
 
 int main() {
-    system("mode con:cols=100 lines=46");
+    system("mode con:cols=100 lines=54");
     LPCWSTR a = L"open \"test.mp3\" type mpegvideo alias mp3";
     LPCWSTR b = L"play mp3 repeat";
     mciSendString(a, NULL, 0, NULL);
